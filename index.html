@@ -10,7 +10,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600&display=swap" rel="stylesheet">
 
     <style>
-
         /* ===== Design tokens ===== */
         :root {
             --bg: #f6f4f1;
@@ -29,7 +28,7 @@
             padding-top: env(safe-area-inset-top, 0px);
             padding-bottom: env(safe-area-inset-bottom, 0px);
             color-scheme: light;
-        };
+        }
 
         @media (prefers-color-scheme: dark) {
             :root:not([data-theme="light"]) {
@@ -45,7 +44,7 @@
                 --friday-tint: #282b2d;
                 color-scheme: dark;
             }
-        };
+        }
 
         :root[data-theme="dark"] {
             --bg: #1b1d1f;
@@ -59,47 +58,47 @@
             --today: #4a3b32;
             --friday-tint: #282b2d;
             color-scheme: dark;
-        };
+        }
 
         /* ===== Base ===== */
         html {
             scroll-padding-top: env(safe-area-inset-top, 0px);
-        };
+        }
 
         *,
         *::before,
         *::after {
             box-sizing: border-box;
-        };
+        }
 
         body {
             margin: 0;
             background: var(--bg);
             color: var(--text);
             font: 15px/1.7 var(--font);
-        };
+        }
 
         button,
         input,
         select {
             font: inherit;
             color: inherit;
-        };
+        }
 
         button {
             cursor: pointer;
-        };
+        }
 
         :focus-visible {
             outline: 2px solid var(--accent);
             outline-offset: 2px;
-        };
+        }
 
         .page {
             max-width: 1120px;
             margin: 0 auto;
             padding: 28px 20px 48px;
-        };
+        }
 
         /* ===== Shared components ===== */
         .button {
@@ -110,22 +109,22 @@
             color: #fff;
             font-weight: 500;
             transition: filter .15s;
-        };
+        }
 
         .button:hover {
             filter: brightness(.95);
-        };
+        }
 
         .button--soft {
             background: var(--accent-soft);
             color: var(--accent-strong);
-        };
+        }
 
         .button--danger {
             background: transparent;
             color: var(--danger);
             padding-inline: 8px;
-        };
+        }
 
         .icon-button {
             flex: none;
@@ -137,19 +136,19 @@
             color: var(--muted);
             font-size: 16px;
             line-height: 1;
-        };
+        }
 
         .icon-button:hover {
             background: var(--border);
             color: var(--text);
-        };
+        }
 
         .card {
             background: var(--surface);
             border: 1px solid var(--border);
             border-radius: 18px;
             padding: 18px;
-        };
+        }
 
         select,
         input[type="text"],
@@ -159,7 +158,7 @@
             background: var(--bg);
             border: 1px solid var(--border);
             border-radius: 10px;
-        };
+        }
 
         /* ===== Header and quote ===== */
         .page-header {
@@ -169,24 +168,24 @@
             gap: 16px;
             flex-wrap: wrap;
             margin-bottom: 20px;
-        };
+        }
 
         .page-header h1 {
             margin: 0;
             font-size: 26px;
             font-weight: 600;
-        };
+        }
 
         .page-header__date {
             margin-top: 2px;
             color: var(--muted);
-        };
+        }
 
         .page-header__actions {
             display: flex;
             gap: 8px;
             align-items: center;
-        };
+        }
 
         .quote-card {
             display: flex;
@@ -197,19 +196,19 @@
             padding: 18px 22px;
             background: var(--accent-soft);
             border-radius: 18px;
-        };
+        }
 
         .quote-card__text {
             margin: 0;
             font-size: 17px;
             font-weight: 500;
-        };
+        }
 
         .quote-card__author {
             margin-top: 6px;
             color: var(--accent-strong);
             font-size: 13px;
-        };
+        }
 
         .quote-card__original {
             display: block;
@@ -218,7 +217,7 @@
             font-size: 12.5px;
             direction: ltr;
             text-align: right;
-        };
+        }
 
         /* ===== Layout ===== */
         .layout {
@@ -226,13 +225,13 @@
             grid-template-columns: 300px 1fr;
             gap: 20px;
             align-items: start;
-        };
+        }
 
         @media (max-width: 820px) {
             .layout {
                 grid-template-columns: 1fr;
             }
-        };
+        }
 
         /* ===== Month calendar ===== */
         .calendar__controls {
@@ -240,30 +239,30 @@
             align-items: center;
             gap: 6px;
             margin-bottom: 12px;
-        };
+        }
 
         .calendar__controls select {
             flex: 1;
-        };
+        }
 
         .calendar__grid {
             display: grid;
             grid-template-columns: repeat(7, 1fr);
             gap: 3px;
             text-align: center;
-        };
+        }
 
         .calendar__weekday {
             padding: 4px 0;
             color: var(--muted);
             font-size: 12px;
-        };
+        }
 
         .calendar__footer {
             display: flex;
             justify-content: center;
             margin-top: 12px;
-        };
+        }
 
         .calendar-day {
             position: relative;
@@ -272,24 +271,24 @@
             border-radius: 10px;
             background: transparent;
             font-size: 13.5px;
-        };
+        }
 
         .calendar-day:hover {
             background: var(--accent-soft);
-        };
+        }
 
         .calendar-day.is-friday {
             color: var(--danger);
-        };
+        }
 
         .calendar-day.is-today {
             background: var(--today);
-        };
+        }
 
         .calendar-day.is-selected {
             background: var(--accent);
             color: #fff;
-        };
+        }
 
         .calendar-day.has-tasks::after {
             content: "";
@@ -302,7 +301,7 @@
             border-radius: 50%;
             background: currentColor;
             opacity: .55;
-        };
+        }
 
         /* ===== Week board ===== */
         .week__bar {
@@ -311,7 +310,7 @@
             gap: 8px;
             flex-wrap: wrap;
             margin-bottom: 14px;
-        };
+        }
 
         .week__title {
             flex: 1;
@@ -319,7 +318,7 @@
             margin: 0;
             font-size: 17px;
             font-weight: 600;
-        };
+        }
 
         .progress {
             height: 6px;
@@ -327,21 +326,21 @@
             overflow: hidden;
             background: var(--border);
             border-radius: 6px;
-        };
-
+        }
+        
         .progress__fill {
             display: block;
             width: 0;
             height: 100%;
             background: var(--accent);
             transition: width .3s;
-        };
+        }
 
         .week__days {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
             gap: 12px;
-        };
+        }
 
         .day-card {
             min-height: 150px;
@@ -349,38 +348,38 @@
             background: var(--surface);
             border: 1px solid var(--border);
             border-radius: 16px;
-        };
+        }
 
         .day-card.is-friday {
             background: var(--friday-tint);
-        };
+        }
 
         .day-card.is-today {
             border-color: var(--accent);
-        };
+        }
 
         .day-card__header {
             display: flex;
             align-items: center;
             justify-content: space-between;
             margin-bottom: 6px;
-        };
+        }
 
         .day-card__weekday {
             font-weight: 600;
-        };
+        }
 
         .day-card__date {
             margin-inline-start: 6px;
             color: var(--muted);
             font-size: 12.5px;
-        };
+        }
 
         .day-card__empty {
             padding: 8px 4px;
             color: var(--muted);
             font-size: 13px;
-        };
+        }
 
         /* ===== Task row ===== */
         .task {
@@ -389,17 +388,17 @@
             gap: 8px;
             padding: 6px 4px;
             border-radius: 10px;
-        };
+        }
 
         .task:hover {
             background: var(--bg);
-        };
+        }
 
         .task__title {
             flex: 1;
             min-width: 0;
             overflow-wrap: anywhere;
-        };
+        }
 
         .task__time {
             flex: none;
@@ -408,30 +407,30 @@
             color: var(--accent-strong);
             border-radius: 8px;
             font-size: 12px;
-        };
+        }
 
         .task.is-done .task__title {
             color: var(--muted);
             text-decoration: line-through;
-        };
+        }
 
         .task .icon-button {
             width: 26px;
             height: 26px;
             font-size: 13px;
             opacity: 0;
-        };
+        }
 
         .task:hover .icon-button,
         .task:focus-within .icon-button {
             opacity: 1;
-        };
+        }
 
         @media (hover: none) {
             .task .icon-button {
                 opacity: 1;
             }
-        };
+        }
 
         .task__checkbox {
             appearance: none;
@@ -445,18 +444,18 @@
             border: 1.5px solid var(--accent);
             border-radius: 50%;
             cursor: pointer;
-        };
+        }
 
         .task__checkbox:checked {
             background: var(--accent);
-        };
+        }
 
         .task__checkbox:checked::after {
             content: "✓";
             color: #fff;
             font-size: 12px;
             line-height: 1;
-        };
+        }
 
         /* ===== Task dialog ===== */
         .task-dialog {
@@ -466,62 +465,63 @@
             color: var(--text);
             border: 1px solid var(--border);
             border-radius: 20px;
-        };
+        }
 
         .task-dialog::backdrop {
             background: rgba(30, 32, 34, .35);
-        };
+        }
 
         .task-dialog h3 {
             margin: 0 0 14px;
             font-weight: 600;
-        };
+        }
 
         .task-dialog label {
             display: block;
             margin: 12px 0 4px;
             color: var(--muted);
             font-size: 13px;
-        };
+        }
 
         .task-dialog input[type="text"] {
             width: 100%;
             padding: 10px 12px;
-        };
+        }
 
         .field-row {
             display: flex;
             gap: 8px;
-        };
+        }
 
         .field-row>* {
             flex: 1;
-        };
+        }
 
         .dialog-actions {
             display: flex;
             align-items: center;
             gap: 8px;
             margin-top: 20px;
-        };
+        }
 
         .dialog-actions__spacer {
             flex: 1;
-        };
+        }
 
         @media (prefers-reduced-motion: reduce) {
             * {
                 transition: none !important;
             }
-        };
-
+        }
     </style>
 
 </head>
 
 <body>
 
-    <!-- HTML Codes -->
+    <!-- ============================================================
+    HTML
+    ============================================================  -->
     <div class="page">
         <header class="page-header">
             <div>
@@ -590,6 +590,515 @@
                 data-action="delete-edited-task">حذف</button>
         </div>
     </dialog>
+
+    <script>
+
+        "use strict";
+
+        /* ============================================================
+            Constants
+           ============================================================ */
+        const STORAGE_KEYS = Object.freeze({ tasks: "todo-fa-tasks", quote: "todo-fa-quote", theme: "todo-fa-theme" });
+        const PERSIAN_DIGITS = "۰۱۲۳۴۵۶۷۸۹";
+        const MONTH_NAMES = ["فروردین", "اردیبهشت", "خرداد", "تیر", "مرداد", "شهریور", "مهر", "آبان", "آذر", "دی", "بهمن", "اسفند"];
+        const WEEKDAY_NAMES = ["شنبه", "یکشنبه", "دوشنبه", "سه‌شنبه", "چهارشنبه", "پنجشنبه", "جمعه"];
+        const WEEKDAY_INITIALS = ["ش", "ی", "د", "س", "چ", "پ", "ج"];
+        const DAYS_IN_WEEK = 7;
+        const MONTHS_IN_YEAR = 12;
+        const FRIDAY_INDEX = 6;
+        const CALENDAR_YEAR_RADIUS = 8;
+        const DIALOG_YEAR_RADIUS = 5;
+        const UNTIMED_SORT_KEY = "99:99"; // pushes tasks without a time to the end of the day
+        const HTML_ESCAPES = { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" };
+
+        const QUOTES = [
+            { text: "حرف زدن آسونه؛ کد رو نشونم بده.", author: "لینوس تروالدز", original: "Talk is cheap. Show me the code." },
+            { text: "بهینه‌سازی زودهنگام ریشهٔ همهٔ بدبختی‌هاست.", author: "دونالد کنوث", original: "Premature optimization is the root of all evil." },
+            { text: "بهترین راه پیش‌بینی آینده، ساختنِ آن است.", author: "آلن کی", original: "The best way to predict the future is to invent it." },
+            { text: "خطرناک‌ترین جمله این است: «همیشه همین‌طور انجامش داده‌ایم».", author: "گریس هاپر", original: "The most dangerous phrase is “We’ve always done it this way.”" },
+            { text: "هر احمقی می‌تواند کدی بنویسد که کامپیوتر بفهمد؛ برنامه‌نویس خوب کدی می‌نویسد که انسان بفهمد.", author: "مارتین فاولر", original: "Any fool can write code that a computer can understand. Good programmers write code that humans can understand." },
+            { text: "سادگی پیش‌شرط اعتمادپذیری است.", author: "ادسخر دایکسترا", original: "Simplicity is prerequisite for reliability." },
+            { text: "من برنامه‌نویس بزرگی نیستم؛ فقط برنامه‌نویس خوبی با عادت‌های عالی‌ام.", author: "کنت بک", original: "I’m not a great programmer; I’m just a good programmer with great habits." },
+            { text: "تنها راه سریع رفتن، خوب رفتن است.", author: "رابرت سی. مارتین", original: "The only way to go fast is to go well." },
+            { text: "تمرکز یعنی تصمیم بگیری چه کارهایی را انجام نمی‌دهی.", author: "جان کارمک", original: "Focus is a matter of deciding what things you’re not going to do." },
+            { text: "فقط تا مسافتی کوتاه را می‌بینیم، اما کارهای زیادی همان‌جا منتظر ماست.", author: "آلن تورینگ", original: "We can only see a short distance ahead, but we can see plenty there that needs to be done." },
+            { text: "اشکال‌زدایی دو برابر سخت‌تر از نوشتن کد است.", author: "برایان کرنیگان", original: "Debugging is twice as hard as writing the code in the first place." },
+        ];
+
+        /* ============================================================
+            Generic helpers
+           ============================================================ */
+        const $ = (selector) => document.querySelector(selector);
+        const range = (first, last) => Array.from({ length: last - first + 1 }, (_, offset) => first + offset);
+        const truncDiv = (dividend, divisor) => Math.trunc(dividend / divisor);
+        const truncRemainder = (dividend, divisor) => dividend - truncDiv(dividend, divisor) * divisor;
+        const toPersianDigits = (value) => String(value).replace(/\d/g, (digit) => PERSIAN_DIGITS[digit]);
+        const escapeHtml = (text) => text.replace(/[&<>"]/g, (character) => HTML_ESCAPES[character]);
+        const generateId = () => Date.now().toString(36) + Math.random().toString(36).slice(2, 6);
+
+        function buildOptions(values, selectedValue, labelOf) {
+            return values
+                .map((value) => `<option value="${value}"${value === selectedValue ? " selected" : ""}>${labelOf(value)}</option>`)
+                .join("");
+        }
+
+        function pickRandomIndexExcept(excludedIndex) {
+            const candidates = range(0, QUOTES.length - 1).filter((index) => index !== excludedIndex);
+            return candidates[Math.floor(Math.random() * candidates.length)];
+        }
+
+        /* ============================================================
+            Jalali calendar
+            A date is { year, month, day }; a "day number" is a Julian day
+            number, which makes day arithmetic trivial (add or subtract).
+           ============================================================ */
+        const JalaliCalendar = (() => {
+            const LEAP_CYCLE_BREAKS = [-61, 9, 38, 199, 426, 686, 756, 818, 1111, 1181, 1210, 1635, 2060, 2097, 2192, 2262, 2324, 2394, 2456, 3178];
+            const DAYS_IN_FIRST_SIX_MONTHS = 186;
+            const DAYS_IN_FIRST_HALF_MONTH = 31;
+            const DAYS_IN_SECOND_HALF_MONTH = 30;
+
+            /** Where Nowruz falls in the Gregorian calendar and how leap years are placed. */
+            function getYearInfo(year) {
+                let leapDays = -14;
+                let previousBreak = LEAP_CYCLE_BREAKS[0];
+                let jump = 0;
+                for (const currentBreak of LEAP_CYCLE_BREAKS.slice(1)) {
+                    jump = currentBreak - previousBreak;
+                    if (year < currentBreak) break;
+                    leapDays += truncDiv(jump, 33) * 8 + truncDiv(truncRemainder(jump, 33), 4);
+                    previousBreak = currentBreak;
+                }
+                let yearsSinceBreak = year - previousBreak;
+                leapDays += truncDiv(yearsSinceBreak, 33) * 8 + truncDiv(truncRemainder(yearsSinceBreak, 33) + 3, 4);
+                if (truncRemainder(jump, 33) === 4 && jump - yearsSinceBreak === 4) leapDays += 1;
+
+                const gregorianYear = year + 621;
+                const gregorianLeapDays = truncDiv(gregorianYear, 4) - truncDiv((truncDiv(gregorianYear, 100) + 1) * 3, 4) - 150;
+                const marchDayOfNowruz = 20 + leapDays - gregorianLeapDays;
+
+                if (jump - yearsSinceBreak < 6) yearsSinceBreak = yearsSinceBreak - jump + truncDiv(jump + 4, 33) * 33;
+                let leapIndex = truncRemainder(truncRemainder(yearsSinceBreak + 1, 33) - 1, 4);
+                if (leapIndex === -1) leapIndex = 4;
+                return { leapIndex, gregorianYear, marchDayOfNowruz };
+            }
+
+            function gregorianToDayNumber(year, month, day) {
+                const shiftedYear = year + truncDiv(month - 8, 6) + 100100;
+                const dayNumber = truncDiv(shiftedYear * 1461, 4) + truncDiv(153 * truncRemainder(month + 9, 12) + 2, 5) + day - 34840408;
+                return dayNumber - truncDiv(truncDiv(shiftedYear, 100) * 3, 4) + 752;
+            }
+
+            function gregorianYearOf(dayNumber) {
+                let scaled = 4 * dayNumber + 139361631;
+                scaled += truncDiv(truncDiv(4 * dayNumber + 183187720, 146097) * 3, 4) * 4 - 3908;
+                const monthBasis = truncDiv(truncRemainder(scaled, 1461), 4) * 5 + 308;
+                const gregorianMonth = truncRemainder(truncDiv(monthBasis, 153), 12) + 1;
+                return truncDiv(scaled, 1461) - 100100 + truncDiv(8 - gregorianMonth, 6);
+            }
+
+            function toDayNumber({ year, month, day }) {
+                const { gregorianYear, marchDayOfNowruz } = getYearInfo(year);
+                const firstOfFarvardin = gregorianToDayNumber(gregorianYear, 3, marchDayOfNowruz);
+                const daysBeforeMonth = (month - 1) * DAYS_IN_FIRST_HALF_MONTH - truncDiv(month, 7) * (month - 7);
+                return firstOfFarvardin + daysBeforeMonth + day - 1;
+            }
+
+            function fromDayNumber(dayNumber) {
+                const gregorianYear = gregorianYearOf(dayNumber);
+                let year = gregorianYear - 621;
+                const info = getYearInfo(year);
+                let daysIntoYear = dayNumber - gregorianToDayNumber(gregorianYear, 3, info.marchDayOfNowruz);
+
+                if (daysIntoYear >= 0) {
+                    if (daysIntoYear < DAYS_IN_FIRST_SIX_MONTHS) {
+                        return { year, month: 1 + truncDiv(daysIntoYear, DAYS_IN_FIRST_HALF_MONTH), day: truncRemainder(daysIntoYear, DAYS_IN_FIRST_HALF_MONTH) + 1 };
+                    }
+                    daysIntoYear -= DAYS_IN_FIRST_SIX_MONTHS;
+                } else {
+                    year -= 1;
+                    daysIntoYear += 179 + (info.leapIndex === 1 ? 1 : 0);
+                }
+                return { year, month: 7 + truncDiv(daysIntoYear, DAYS_IN_SECOND_HALF_MONTH), day: truncRemainder(daysIntoYear, DAYS_IN_SECOND_HALF_MONTH) + 1 };
+            }
+
+            function monthLength(year, month) {
+                if (month <= 6) return DAYS_IN_FIRST_HALF_MONTH;
+                if (month <= 11) return DAYS_IN_SECOND_HALF_MONTH;
+                return getYearInfo(year).leapIndex === 0 ? 30 : 29;
+            }
+
+            /** 0 = Saturday … 6 = Friday. */
+            const weekdayIndex = (dayNumber) => (dayNumber + 2) % DAYS_IN_WEEK;
+
+            function today() {
+                const now = new Date();
+                return gregorianToDayNumber(now.getFullYear(), now.getMonth() + 1, now.getDate());
+            }
+
+            return { toDayNumber, fromDayNumber, monthLength, weekdayIndex, today };
+        })();
+
+        /* ============================================================
+            Date formatting
+           ============================================================ */
+        function formatDate(dayNumber) {
+            const { year, month, day } = JalaliCalendar.fromDayNumber(dayNumber);
+            return `${toPersianDigits(day)} ${MONTH_NAMES[month - 1]} ${toPersianDigits(year)}`;
+        }
+
+        function formatDayAndMonth(dayNumber) {
+            const { month, day } = JalaliCalendar.fromDayNumber(dayNumber);
+            return `${toPersianDigits(day)} ${MONTH_NAMES[month - 1]}`;
+        }
+
+        function formatWeekTitle(firstDay, lastDay) {
+            const { year } = JalaliCalendar.fromDayNumber(lastDay);
+            return `هفتهٔ ${formatDayAndMonth(firstDay)} تا ${formatDayAndMonth(lastDay)} ${toPersianDigits(year)}`;
+        }
+
+        /* ============================================================
+            Persistence (localStorage, failure-tolerant)
+           ============================================================ */
+        const Persistence = {
+            load(key, fallback) {
+                try {
+                    const raw = localStorage.getItem(key);
+                    return raw === null ? fallback : JSON.parse(raw);
+                } catch {
+                    return fallback;
+                }
+            },
+            save(key, value) {
+                try {
+                    localStorage.setItem(key, JSON.stringify(value));
+                } catch {
+                    /* storage unavailable: the app keeps working in memory */
+                }
+            },
+        };
+
+        /* ============================================================
+            Tasks
+           ============================================================ */
+        /** Earlier versions stored the day as `j`; keep those tasks readable. */
+        function migrateLegacyTask(task) {
+            return { id: task.id, title: task.title, time: task.time, done: task.done, dayNumber: task.dayNumber ?? task.j };
+        }
+
+        const compareByTime = (a, b) => (a.time || UNTIMED_SORT_KEY).localeCompare(b.time || UNTIMED_SORT_KEY);
+
+        const Tasks = {
+            items: Persistence.load(STORAGE_KEYS.tasks, []).map(migrateLegacyTask),
+
+            find(id) {
+                return this.items.find((task) => task.id === id);
+            },
+            add({ title, dayNumber, time }) {
+                this.items.push({ id: generateId(), title, dayNumber, time, done: false });
+                this.persist();
+            },
+            update(id, changes) {
+                Object.assign(this.find(id), changes);
+                this.persist();
+            },
+            remove(id) {
+                this.items = this.items.filter((task) => task.id !== id);
+                this.persist();
+            },
+            onDay(dayNumber) {
+                return this.items.filter((task) => task.dayNumber === dayNumber).sort(compareByTime);
+            },
+            between(firstDay, lastDay) {
+                return this.items.filter((task) => task.dayNumber >= firstDay && task.dayNumber <= lastDay);
+            },
+            persist() {
+                Persistence.save(STORAGE_KEYS.tasks, this.items);
+            },
+        };
+
+        /* ============================================================
+            Application state and DOM references
+           ============================================================ */
+        const state = { today: JalaliCalendar.today(), selectedDay: JalaliCalendar.today(), editingTaskId: null };
+
+        const el = {
+            todayLabel: $("#today-label"),
+            themeButton: $("#theme-button"),
+            quoteText: $("#quote-text"),
+            quoteAuthor: $("#quote-author"),
+            quoteOriginal: $("#quote-original"),
+            monthSelect: $("#month-select"),
+            yearSelect: $("#year-select"),
+            calendarGrid: $("#calendar-grid"),
+            weekTitle: $("#week-title"),
+            progressFill: $("#progress-fill"),
+            weekDays: $("#week-days"),
+            dialog: $("#task-dialog"),
+            dialogTitle: $("#dialog-title"),
+            dialogDeleteButton: $("#dialog-delete-button"),
+            taskTitle: $("#task-title"),
+            taskDay: $("#task-day"),
+            taskMonth: $("#task-month"),
+            taskYear: $("#task-year"),
+            taskTime: $("#task-time"),
+        };
+
+        /* ============================================================
+            Theme
+           ============================================================ */
+        const Theme = {
+            root: document.documentElement,
+
+            isDark() {
+                const explicitTheme = this.root.dataset.theme;
+                return explicitTheme ? explicitTheme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+            },
+            restore() {
+                const savedTheme = Persistence.load(STORAGE_KEYS.theme, null);
+                if (savedTheme) this.root.dataset.theme = savedTheme;
+                this.paintButton();
+            },
+            toggle() {
+                const nextTheme = this.isDark() ? "light" : "dark";
+                this.root.dataset.theme = nextTheme;
+                Persistence.save(STORAGE_KEYS.theme, nextTheme);
+                this.paintButton();
+            },
+            paintButton() {
+                const label = this.isDark() ? "حالت روشن" : "حالت تاریک";
+                el.themeButton.textContent = this.isDark() ? "☀" : "☾";
+                el.themeButton.title = label;
+                el.themeButton.setAttribute("aria-label", label);
+            },
+        };
+
+        /* ============================================================
+            Quote of the day
+           ============================================================ */
+        const QuoteOfTheDay = {
+            show({ forceNew = false } = {}) {
+                const { text, author, original } = QUOTES[this.chooseIndex(forceNew)];
+                el.quoteText.textContent = `«${text}»`;
+                el.quoteAuthor.textContent = author;
+                el.quoteOriginal.textContent = original;
+            },
+            chooseIndex(forceNew) {
+                const saved = Persistence.load(STORAGE_KEYS.quote, {});
+                if (saved.dayNumber === state.today && !forceNew) return saved.index;
+                const index = pickRandomIndexExcept(saved.index);
+                Persistence.save(STORAGE_KEYS.quote, { dayNumber: state.today, index });
+                return index;
+            },
+        };
+
+        /* ============================================================
+            Views
+           ============================================================ */
+        function renderCalendarDay(dayNumber, daysWithTasks) {
+            const classNames = [
+                "calendar-day",
+                dayNumber === state.today && "is-today",
+                dayNumber === state.selectedDay && "is-selected",
+                daysWithTasks.has(dayNumber) && "has-tasks",
+                JalaliCalendar.weekdayIndex(dayNumber) === FRIDAY_INDEX && "is-friday",
+            ].filter(Boolean);
+            const label = toPersianDigits(JalaliCalendar.fromDayNumber(dayNumber).day);
+            return `<button class="${classNames.join(" ")}" data-action="select-day" data-day="${dayNumber}">${label}</button>`;
+        }
+
+        function renderCalendar() {
+            const { year, month } = JalaliCalendar.fromDayNumber(state.selectedDay);
+            const daysWithTasks = new Set(Tasks.items.map((task) => task.dayNumber));
+            const firstOfMonth = JalaliCalendar.toDayNumber({ year, month, day: 1 });
+            const lastOfMonth = firstOfMonth + JalaliCalendar.monthLength(year, month) - 1;
+
+            const weekdayHeaders = WEEKDAY_INITIALS.map((initial) => `<span class="calendar__weekday">${initial}</span>`).join("");
+            const leadingBlanks = "<span></span>".repeat(JalaliCalendar.weekdayIndex(firstOfMonth));
+            const dayButtons = range(firstOfMonth, lastOfMonth).map((dayNumber) => renderCalendarDay(dayNumber, daysWithTasks)).join("");
+            el.calendarGrid.innerHTML = weekdayHeaders + leadingBlanks + dayButtons;
+
+            el.monthSelect.innerHTML = buildOptions(range(1, MONTHS_IN_YEAR), month, (value) => MONTH_NAMES[value - 1]);
+            el.yearSelect.innerHTML = buildOptions(range(year - CALENDAR_YEAR_RADIUS, year + CALENDAR_YEAR_RADIUS), year, toPersianDigits);
+        }
+
+        function renderTask(task) {
+            const time = task.time ? `<time class="task__time">${toPersianDigits(task.time)}</time>` : "";
+            return `
+                        <div class="task${task.done ? " is-done" : ""}">
+                        <input type="checkbox" class="task__checkbox" data-action="toggle-task" data-task-id="${task.id}"${task.done ? " checked" : ""} aria-label="انجام شد">
+                        <span class="task__title">${escapeHtml(task.title)}</span>
+                        ${time}
+                        <button class="icon-button" data-action="edit-task" data-task-id="${task.id}" aria-label="ویرایش">✎</button>
+                        <button class="icon-button" data-action="delete-task" data-task-id="${task.id}" aria-label="حذف">✕</button>
+                        </div>
+                    `;
+        }
+
+        function renderDayCard(dayNumber, weekdayIndex) {
+            const classNames = ["day-card", weekdayIndex === FRIDAY_INDEX && "is-friday", dayNumber === state.today && "is-today"].filter(Boolean);
+            const tasks = Tasks.onDay(dayNumber);
+            const body = tasks.length ? tasks.map(renderTask).join("") : '<div class="day-card__empty">کاری برنامه‌ریزی نشده</div>';
+            return `
+                        <section class="${classNames.join(" ")}">
+                            <div class="day-card__header">
+                                <div>
+                                <span class="day-card__weekday">${WEEKDAY_NAMES[weekdayIndex]}</span>
+                                <span class="day-card__date">${formatDayAndMonth(dayNumber)}</span>
+                                </div>
+                                <button class="icon-button" data-action="add-task" data-day="${dayNumber}" aria-label="افزودن کار">+</button>
+                            </div>
+                            ${body}
+                        </section>
+                    `;
+        }
+
+        function calculateDonePercent(tasks) {
+            if (tasks.length === 0) return 0;
+            return (tasks.filter((task) => task.done).length / tasks.length) * 100;
+        }
+
+        function renderWeek() {
+            const firstDay = state.selectedDay - JalaliCalendar.weekdayIndex(state.selectedDay);
+            const lastDay = firstDay + DAYS_IN_WEEK - 1;
+
+            el.weekTitle.textContent = formatWeekTitle(firstDay, lastDay);
+            el.progressFill.style.width = `${calculateDonePercent(Tasks.between(firstDay, lastDay))}%`;
+            el.weekDays.innerHTML = range(0, DAYS_IN_WEEK - 1).map((weekdayIndex) => renderDayCard(firstDay + weekdayIndex, weekdayIndex)).join("");
+        }
+
+        function render() {
+            el.todayLabel.textContent = `امروز ${WEEKDAY_NAMES[JalaliCalendar.weekdayIndex(state.today)]}، ${formatDate(state.today)}`;
+            renderCalendar();
+            renderWeek();
+        }
+
+        /* ============================================================
+            Navigation
+           ============================================================ */
+        function selectDay(dayNumber) {
+            state.selectedDay = dayNumber;
+            render();
+        }
+
+        function goToMonth(year, month) {
+            const { day } = JalaliCalendar.fromDayNumber(state.selectedDay);
+            const clampedDay = Math.min(day, JalaliCalendar.monthLength(year, month));
+            selectDay(JalaliCalendar.toDayNumber({ year, month, day: clampedDay }));
+        }
+
+        function shiftMonth(delta) {
+            const { year, month } = JalaliCalendar.fromDayNumber(state.selectedDay);
+            const monthIndex = year * MONTHS_IN_YEAR + (month - 1) + delta;
+            goToMonth(Math.floor(monthIndex / MONTHS_IN_YEAR), (monthIndex % MONTHS_IN_YEAR) + 1);
+        }
+
+        const shiftWeek = (delta) => selectDay(state.selectedDay + delta * DAYS_IN_WEEK);
+
+        /* ============================================================
+            Task dialog
+           ============================================================ */
+        function refreshDayOptions(preferredDay) {
+            const length = JalaliCalendar.monthLength(Number(el.taskYear.value), Number(el.taskMonth.value));
+            el.taskDay.innerHTML = buildOptions(range(1, length), Math.min(preferredDay, length), toPersianDigits);
+        }
+
+        function openTaskDialog(task, defaultDayNumber) {
+            const { year, month, day } = JalaliCalendar.fromDayNumber(task ? task.dayNumber : defaultDayNumber);
+            state.editingTaskId = task ? task.id : null;
+
+            el.dialogTitle.textContent = task ? "ویرایش کار" : "کار جدید";
+            el.dialogDeleteButton.hidden = !task;
+            el.taskTitle.value = task ? task.title : "";
+            el.taskTime.value = task ? task.time || "" : "";
+            el.taskMonth.innerHTML = buildOptions(range(1, MONTHS_IN_YEAR), month, (value) => MONTH_NAMES[value - 1]);
+            el.taskYear.innerHTML = buildOptions(range(year - DIALOG_YEAR_RADIUS, year + DIALOG_YEAR_RADIUS), year, toPersianDigits);
+            refreshDayOptions(day);
+
+            el.dialog.showModal();
+            el.taskTitle.focus();
+        }
+
+        function readTaskForm() {
+            return {
+                title: el.taskTitle.value.trim(),
+                time: el.taskTime.value,
+                dayNumber: JalaliCalendar.toDayNumber({
+                    year: Number(el.taskYear.value),
+                    month: Number(el.taskMonth.value),
+                    day: Number(el.taskDay.value),
+                }),
+            };
+        }
+
+        function saveTaskFromDialog() {
+            const fields = readTaskForm();
+            if (!fields.title) {
+                el.taskTitle.focus();
+                return;
+            }
+            if (state.editingTaskId) Tasks.update(state.editingTaskId, fields);
+            else Tasks.add(fields);
+
+            el.dialog.close();
+            selectDay(fields.dayNumber);
+        }
+
+        function deleteTask(taskId) {
+            Tasks.remove(taskId);
+            render();
+        }
+
+        /* ============================================================
+            Event wiring
+           ============================================================ */
+        const clickActions = {
+            "select-day": (target) => selectDay(Number(target.dataset.day)),
+            "previous-month": () => shiftMonth(-1),
+            "next-month": () => shiftMonth(1),
+            "previous-week": () => shiftWeek(-1),
+            "next-week": () => shiftWeek(1),
+            "go-today": () => selectDay(state.today),
+            "add-task": (target) => openTaskDialog(null, Number(target.dataset.day) || state.selectedDay),
+            "edit-task": (target) => openTaskDialog(Tasks.find(target.dataset.taskId)),
+            "delete-task": (target) => deleteTask(target.dataset.taskId),
+            "toggle-task": (target) => {
+                Tasks.update(target.dataset.taskId, { done: target.checked });
+                render();
+            },
+            "save-task": saveTaskFromDialog,
+            "cancel-task": () => el.dialog.close(),
+            "delete-edited-task": () => {
+                el.dialog.close();
+                deleteTask(state.editingTaskId);
+            },
+            "shuffle-quote": () => QuoteOfTheDay.show({ forceNew: true }),
+            "toggle-theme": () => Theme.toggle(),
+        };
+
+        document.addEventListener("click", (event) => {
+            const target = event.target.closest("[data-action]");
+            if (target) clickActions[target.dataset.action]?.(target);
+        });
+
+        el.monthSelect.addEventListener("change", () => goToMonth(JalaliCalendar.fromDayNumber(state.selectedDay).year, Number(el.monthSelect.value)));
+        el.yearSelect.addEventListener("change", () => goToMonth(Number(el.yearSelect.value), JalaliCalendar.fromDayNumber(state.selectedDay).month));
+        el.taskMonth.addEventListener("change", () => refreshDayOptions(Number(el.taskDay.value)));
+        el.taskYear.addEventListener("change", () => refreshDayOptions(Number(el.taskDay.value)));
+        el.taskTitle.addEventListener("keydown", (event) => {
+            if (event.key !== "Enter") return;
+            event.preventDefault();
+            saveTaskFromDialog();
+        });
+
+        /* ============================================================
+            Start
+           ============================================================ */
+        Theme.restore();
+        QuoteOfTheDay.show();
+        render();
+
+    </script>
 
 </body>
 
