@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO Do List</title>
+</head>
+
+<body>
+
+    <!-- HTML Codes -->
+    <div class="page">
+        <header class="page-header">
+            <div>
+                <h1>برنامهٔ هفتگی</h1>
+                <div class="page-header__date" id="today-label"></div>
+            </div>
+            <div class="page-header__actions">
+                <button class="button button--soft" id="theme-button" data-action="toggle-theme"></button>
+                <button class="button" data-action="add-task">+ کار جدید</button>
+            </div>
+        </header>
+
+        <section class="quote-card" aria-live="polite">
+            <div>
+                <p class="quote-card__text" id="quote-text"></p>
+                <div class="quote-card__author" id="quote-author"></div>
+                <small class="quote-card__original" id="quote-original"></small>
+            </div>
+            <button class="icon-button" data-action="shuffle-quote" title="جملهٔ دیگر"
+                aria-label="جملهٔ دیگر">↻</button>
+        </section>
+
+        <div class="layout">
+            <aside class="card calendar">
+                <div class="calendar__controls">
+                    <button class="icon-button" data-action="next-month" aria-label="ماه بعد">›</button>
+                    <select id="month-select" aria-label="ماه"></select>
+                    <select id="year-select" aria-label="سال"></select>
+                    <button class="icon-button" data-action="previous-month" aria-label="ماه قبل">‹</button>
+                </div>
+                <div class="calendar__grid" id="calendar-grid"></div>
+                <div class="calendar__footer">
+                    <button class="button button--soft" data-action="go-today">برو به امروز</button>
+                </div>
+            </aside>
+
+            <main class="week">
+                <div class="week__bar">
+                    <h2 class="week__title" id="week-title"></h2>
+                    <button class="icon-button" data-action="next-week" aria-label="هفتهٔ بعد">›</button>
+                    <button class="icon-button" data-action="previous-week" aria-label="هفتهٔ قبل">‹</button>
+                </div>
+                <div class="progress" title="پیشرفت هفته"><i class="progress__fill" id="progress-fill"></i></div>
+                <div class="week__days" id="week-days"></div>
+            </main>
+        </div>
+    </div>
+
+    <dialog class="task-dialog" id="task-dialog">
+        <h3 id="dialog-title"></h3>
+        <label for="task-title">عنوان</label>
+        <input type="text" id="task-title" maxlength="120" autocomplete="off" placeholder="مثلاً: تمرین فلکس‌باکس">
+        <label>تاریخ</label>
+        <div class="field-row">
+            <select id="task-day" aria-label="روز"></select>
+            <select id="task-month" aria-label="ماه"></select>
+            <select id="task-year" aria-label="سال"></select>
+        </div>
+        <label for="task-time">ساعت (اختیاری)</label>
+        <input type="time" id="task-time" dir="ltr">
+        <div class="dialog-actions">
+            <button class="button" data-action="save-task">ذخیره</button>
+            <button class="button button--soft" data-action="cancel-task">انصراف</button>
+            <span class="dialog-actions__spacer"></span>
+            <button class="button button--danger" id="dialog-delete-button"
+                data-action="delete-edited-task">حذف</button>
+        </div>
+    </dialog>
+    
+</body>
+
+</html>
