@@ -65,9 +65,7 @@
             scroll-padding-top: env(safe-area-inset-top, 0px);
         }
 
-        *,
-        *::before,
-        *::after {
+        * ,*::before ,*::after {
             box-sizing: border-box;
         }
 
@@ -78,9 +76,7 @@
             font: 15px/1.7 var(--font);
         }
 
-        button,
-        input,
-        select {
+        button ,input ,select {
             font: inherit;
             color: inherit;
         }
@@ -150,9 +146,7 @@
             padding: 18px;
         }
 
-        select,
-        input[type="text"],
-        input[type="time"] {
+        select ,input[type="text"] ,input[type="time"] {
             min-width: 0;
             padding: 6px 8px;
             background: var(--bg);
@@ -547,10 +541,10 @@
         <div class="layout">
             <aside class="card calendar">
                 <div class="calendar__controls">
-                    <button class="icon-button" data-action="next-month" aria-label="ماه بعد">›</button>
+                    <button class="icon-button" data-action="next-month" aria-label="ماه بعد">‹</button>
                     <select id="month-select" aria-label="ماه"></select>
                     <select id="year-select" aria-label="سال"></select>
-                    <button class="icon-button" data-action="previous-month" aria-label="ماه قبل">‹</button>
+                    <button class="icon-button" data-action="previous-month" aria-label="ماه قبل">›</button>
                 </div>
                 <div class="calendar__grid" id="calendar-grid"></div>
                 <div class="calendar__footer">
@@ -561,8 +555,8 @@
             <main class="week">
                 <div class="week__bar">
                     <h2 class="week__title" id="week-title"></h2>
-                    <button class="icon-button" data-action="next-week" aria-label="هفتهٔ بعد">›</button>
-                    <button class="icon-button" data-action="previous-week" aria-label="هفتهٔ قبل">‹</button>
+                    <button class="icon-button" data-action="next-week" aria-label="هفتهٔ بعد">‹</button>
+                    <button class="icon-button" data-action="previous-week" aria-label="هفتهٔ قبل">›</button>
                 </div>
                 <div class="progress" title="پیشرفت هفته"><i class="progress__fill" id="progress-fill"></i></div>
                 <div class="week__days" id="week-days"></div>
